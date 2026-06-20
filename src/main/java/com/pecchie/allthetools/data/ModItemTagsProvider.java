@@ -5,9 +5,9 @@ import com.pecchie.allthetools.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.data.TagLookup;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,9 +21,8 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        // Aggiungi i nostri CustomSpearItem al tag 'spears' di Backported Spears
-        // Il tag 'spears' è definito da Backported Spears, quindi lo referenziamo direttamente.
-        this.tag(ItemTags.create(new net.minecraft.resources.ResourceLocation("spears", "spears")))
+        // Correzione ResourceLocation per NeoForge 1.21.1
+        this.tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("backported_spears", "spears")))
                 .add(ModItems.WOOD_SPEAR.get())
                 .add(ModItems.FLINT_SPEAR.get())
                 .add(ModItems.STONE_SPEAR.get())
@@ -43,9 +42,5 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.DIAMOND_SPEAR.get())
                 .add(ModItems.ECHO_SPEAR.get())
                 .add(ModItems.NETHERITE_SPEAR.get());
-
-        // Aggiungi i tools di ferro al tag 'swords' per l'interazione con l'armatura di flint
-        this.tag(ItemTags.SWORDS)
-                .add(ModItems.IRON_SWORD.get());
     }
 }
