@@ -1,26 +1,24 @@
 modLoader="javafml"
-loaderVersion="[2,)"
-license="MIT"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 [[mods]]
-modId="allthetools"
-version="1.0.0"
-displayName="AllTheTools"
-authors="pecchie"
-description='''
-A mod that adds tools and armor for almost every material in Minecraft, including all wood variants, flint, redstone, lapis, and more!
-'''
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
+    authors="${mod_authors}"
+    description="${mod_description}"
 
-[[dependencies.allthetools]]
+[[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1,)"
+    versionRange="${neoforge_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.allthetools]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.1,1.21.1]"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
