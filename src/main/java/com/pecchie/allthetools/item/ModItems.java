@@ -29,7 +29,7 @@ public class ModItems {
     public static final DeferredItem<Item> OAK_WOOD_SHIELD = ITEMS.register("oak_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> OAK_WOOD_SPEAR = registerSpear("oak_wood_spear", ModToolTiers.OAK);
 
-    // SPRUCE
+    // Altri legni registrati allo stesso modo...
     public static final DeferredItem<Item> SPRUCE_WOOD_SWORD = registerSword("spruce_wood_sword", ModToolTiers.SPRUCE);
     public static final DeferredItem<Item> SPRUCE_WOOD_PICKAXE = registerPickaxe("spruce_wood_pickaxe", ModToolTiers.SPRUCE);
     public static final DeferredItem<Item> SPRUCE_WOOD_AXE = registerAxe("spruce_wood_axe", ModToolTiers.SPRUCE);
@@ -42,7 +42,6 @@ public class ModItems {
     public static final DeferredItem<Item> SPRUCE_WOOD_SHIELD = ITEMS.register("spruce_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> SPRUCE_WOOD_SPEAR = registerSpear("spruce_wood_spear", ModToolTiers.SPRUCE);
 
-    // BIRCH
     public static final DeferredItem<Item> BIRCH_WOOD_SWORD = registerSword("birch_wood_sword", ModToolTiers.BIRCH);
     public static final DeferredItem<Item> BIRCH_WOOD_PICKAXE = registerPickaxe("birch_wood_pickaxe", ModToolTiers.BIRCH);
     public static final DeferredItem<Item> BIRCH_WOOD_AXE = registerAxe("birch_wood_axe", ModToolTiers.BIRCH);
@@ -55,7 +54,6 @@ public class ModItems {
     public static final DeferredItem<Item> BIRCH_WOOD_SHIELD = ITEMS.register("birch_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> BIRCH_WOOD_SPEAR = registerSpear("birch_wood_spear", ModToolTiers.BIRCH);
 
-    // JUNGLE
     public static final DeferredItem<Item> JUNGLE_WOOD_SWORD = registerSword("jungle_wood_sword", ModToolTiers.JUNGLE);
     public static final DeferredItem<Item> JUNGLE_WOOD_PICKAXE = registerPickaxe("jungle_wood_pickaxe", ModToolTiers.JUNGLE);
     public static final DeferredItem<Item> JUNGLE_WOOD_AXE = registerAxe("jungle_wood_axe", ModToolTiers.JUNGLE);
@@ -68,7 +66,6 @@ public class ModItems {
     public static final DeferredItem<Item> JUNGLE_WOOD_SHIELD = ITEMS.register("jungle_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> JUNGLE_WOOD_SPEAR = registerSpear("jungle_wood_spear", ModToolTiers.JUNGLE);
 
-    // ACACIA
     public static final DeferredItem<Item> ACACIA_WOOD_SWORD = registerSword("acacia_wood_sword", ModToolTiers.ACACIA);
     public static final DeferredItem<Item> ACACIA_WOOD_PICKAXE = registerPickaxe("acacia_wood_pickaxe", ModToolTiers.ACACIA);
     public static final DeferredItem<Item> ACACIA_WOOD_AXE = registerAxe("acacia_wood_axe", ModToolTiers.ACACIA);
@@ -81,7 +78,6 @@ public class ModItems {
     public static final DeferredItem<Item> ACACIA_WOOD_SHIELD = ITEMS.register("acacia_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> ACACIA_WOOD_SPEAR = registerSpear("acacia_wood_spear", ModToolTiers.ACACIA);
 
-    // DARK OAK
     public static final DeferredItem<Item> DARK_OAK_WOOD_SWORD = registerSword("dark_oak_wood_sword", ModToolTiers.DARK_OAK);
     public static final DeferredItem<Item> DARK_OAK_WOOD_PICKAXE = registerPickaxe("dark_oak_wood_pickaxe", ModToolTiers.DARK_OAK);
     public static final DeferredItem<Item> DARK_OAK_WOOD_AXE = registerAxe("dark_oak_wood_axe", ModToolTiers.DARK_OAK);
@@ -94,7 +90,6 @@ public class ModItems {
     public static final DeferredItem<Item> DARK_OAK_WOOD_SHIELD = ITEMS.register("dark_oak_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> DARK_OAK_WOOD_SPEAR = registerSpear("dark_oak_wood_spear", ModToolTiers.DARK_OAK);
 
-    // MANGROVE
     public static final DeferredItem<Item> MANGROVE_WOOD_SWORD = registerSword("mangrove_wood_sword", ModToolTiers.MANGROVE);
     public static final DeferredItem<Item> MANGROVE_WOOD_PICKAXE = registerPickaxe("mangrove_wood_pickaxe", ModToolTiers.MANGROVE);
     public static final DeferredItem<Item> MANGROVE_WOOD_AXE = registerAxe("mangrove_wood_axe", ModToolTiers.MANGROVE);
@@ -107,7 +102,6 @@ public class ModItems {
     public static final DeferredItem<Item> MANGROVE_WOOD_SHIELD = ITEMS.register("mangrove_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> MANGROVE_WOOD_SPEAR = registerSpear("mangrove_wood_spear", ModToolTiers.MANGROVE);
 
-    // CHERRY
     public static final DeferredItem<Item> CHERRY_WOOD_SWORD = registerSword("cherry_wood_sword", ModToolTiers.CHERRY);
     public static final DeferredItem<Item> CHERRY_WOOD_PICKAXE = registerPickaxe("cherry_wood_pickaxe", ModToolTiers.CHERRY);
     public static final DeferredItem<Item> CHERRY_WOOD_AXE = registerAxe("cherry_wood_axe", ModToolTiers.CHERRY);
@@ -120,7 +114,6 @@ public class ModItems {
     public static final DeferredItem<Item> CHERRY_WOOD_SHIELD = ITEMS.register("cherry_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> CHERRY_WOOD_SPEAR = registerSpear("cherry_wood_spear", ModToolTiers.CHERRY);
 
-    // BAMBOO
     public static final DeferredItem<Item> BAMBOO_WOOD_SWORD = registerSword("bamboo_wood_sword", ModToolTiers.BAMBOO);
     public static final DeferredItem<Item> BAMBOO_WOOD_PICKAXE = registerPickaxe("bamboo_wood_pickaxe", ModToolTiers.BAMBOO);
     public static final DeferredItem<Item> BAMBOO_WOOD_AXE = registerAxe("bamboo_wood_axe", ModToolTiers.BAMBOO);
@@ -133,7 +126,6 @@ public class ModItems {
     public static final DeferredItem<Item> BAMBOO_WOOD_SHIELD = ITEMS.register("bamboo_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> BAMBOO_WOOD_SPEAR = registerSpear("bamboo_wood_spear", ModToolTiers.BAMBOO);
 
-    // CRIMSON
     public static final DeferredItem<Item> CRIMSON_WOOD_SWORD = registerSword("crimson_wood_sword", ModToolTiers.CRIMSON);
     public static final DeferredItem<Item> CRIMSON_WOOD_PICKAXE = registerPickaxe("crimson_wood_pickaxe", ModToolTiers.CRIMSON);
     public static final DeferredItem<Item> CRIMSON_WOOD_AXE = registerAxe("crimson_wood_axe", ModToolTiers.CRIMSON);
@@ -146,7 +138,6 @@ public class ModItems {
     public static final DeferredItem<Item> CRIMSON_WOOD_SHIELD = ITEMS.register("crimson_wood_shield", () -> new ShieldItem(new Item.Properties().durability(336)));
     public static final DeferredItem<Item> CRIMSON_WOOD_SPEAR = registerSpear("crimson_wood_spear", ModToolTiers.CRIMSON);
 
-    // WARPED
     public static final DeferredItem<Item> WARPED_WOOD_SWORD = registerSword("warped_wood_sword", ModToolTiers.WARPED);
     public static final DeferredItem<Item> WARPED_WOOD_PICKAXE = registerPickaxe("warped_wood_pickaxe", ModToolTiers.WARPED);
     public static final DeferredItem<Item> WARPED_WOOD_AXE = registerAxe("warped_wood_axe", ModToolTiers.WARPED);
@@ -316,11 +307,11 @@ public class ModItems {
     public static final DeferredItem<Item> EMERALD_SPEAR = registerSpear("emerald_spear", ModToolTiers.EMERALD);
 
     // ECHO
-    public static final DeferredItem<Item> ECHO_SWORD = ITEMS.register("echo_sword", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.ECHO, 3, -2.4f))));
-    public static final DeferredItem<Item> ECHO_PICKAXE = ITEMS.register("echo_pickaxe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.ECHO, 1, -2.8f))));
-    public static final DeferredItem<Item> ECHO_AXE = ITEMS.register("echo_axe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.ECHO, 6, -3.2f))));
-    public static final DeferredItem<Item> ECHO_SHOVEL = ITEMS.register("echo_shovel", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.ECHO, 1.5f, -3.0f))));
-    public static final DeferredItem<Item> ECHO_HOE = ITEMS.register("echo_hoe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.ECHO, 0, -3.0f))));
+    public static final DeferredItem<Item> ECHO_SWORD = ITEMS.register("echo_sword", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties()));
+    public static final DeferredItem<Item> ECHO_PICKAXE = ITEMS.register("echo_pickaxe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties()));
+    public static final DeferredItem<Item> ECHO_AXE = ITEMS.register("echo_axe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties()));
+    public static final DeferredItem<Item> ECHO_SHOVEL = ITEMS.register("echo_shovel", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties()));
+    public static final DeferredItem<Item> ECHO_HOE = ITEMS.register("echo_hoe", () -> new CustomEchoToolItem(ModToolTiers.ECHO, new Item.Properties()));
     public static final DeferredItem<Item> ECHO_HELMET = ITEMS.register("echo_helmet", () -> new CustomEchoArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
     public static final DeferredItem<Item> ECHO_CHESTPLATE = ITEMS.register("echo_chestplate", () -> new CustomEchoArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
     public static final DeferredItem<Item> ECHO_LEGGINGS = ITEMS.register("echo_leggings", () -> new CustomEchoArmorItem(ModArmorMaterials.ECHO, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
@@ -335,24 +326,24 @@ public class ModItems {
 
     // HELPER METHODS
     private static DeferredItem<Item> registerSword(String name, Tier tier) {
-        return ITEMS.register(name, () -> new SwordItem(tier, new Item.Properties().attributes(SwordItem.createAttributes(tier, 3, -2.4f))));
+        return ITEMS.register(name, () -> new SwordItem(tier, new Item.Properties()));
     }
     private static DeferredItem<Item> registerPickaxe(String name, Tier tier) {
-        return ITEMS.register(name, () -> new PickaxeItem(tier, new Item.Properties().attributes(PickaxeItem.createAttributes(tier, 1, -2.8f))));
+        return ITEMS.register(name, () -> new PickaxeItem(tier, new Item.Properties()));
     }
     private static DeferredItem<Item> registerAxe(String name, Tier tier) {
-        return ITEMS.register(name, () -> new AxeItem(tier, new Item.Properties().attributes(AxeItem.createAttributes(tier, 6, -3.2f))));
+        return ITEMS.register(name, () -> new AxeItem(tier, new Item.Properties()));
     }
     private static DeferredItem<Item> registerShovel(String name, Tier tier) {
-        return ITEMS.register(name, () -> new ShovelItem(tier, new Item.Properties().attributes(ShovelItem.createAttributes(tier, 1.5f, -3.0f))));
+        return ITEMS.register(name, () -> new ShovelItem(tier, new Item.Properties()));
     }
     private static DeferredItem<Item> registerHoe(String name, Tier tier) {
-        return ITEMS.register(name, () -> new HoeItem(tier, new Item.Properties().attributes(HoeItem.createAttributes(tier, 0, -3.0f))));
+        return ITEMS.register(name, () -> new HoeItem(tier, new Item.Properties()));
     }
     private static DeferredItem<Item> registerArmor(String name, net.minecraft.core.Holder<ArmorMaterial> material, ArmorItem.Type type) {
         return ITEMS.register(name, () -> new ArmorItem(material, type, new Item.Properties().durability(type.getDurability(15))));
     }
     private static DeferredItem<Item> registerSpear(String name, Tier tier) {
-        return ITEMS.register(name, () -> new CustomSpearItem(tier, new Item.Properties().attributes(SwordItem.createAttributes(tier, 3, -2.4f))));
+        return ITEMS.register(name, () -> new CustomSpearItem(tier, new Item.Properties()));
     }
 }

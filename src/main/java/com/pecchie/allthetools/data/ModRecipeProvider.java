@@ -1,12 +1,12 @@
 package com.pecchie.allthetools.data;
 
+import com.pecchie.allthetools.AllTheTools;
 import com.pecchie.allthetools.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import org.jetbrains.annotations.Nullable;
@@ -79,10 +79,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         addSpearRecipe(pRecipeOutput, Items.NETHERITE_INGOT, Items.STICK, ModItems.NETHERITE_SPEAR, "netherite");
 
         // SPECIAL RECIPES
-        // Carbon Fiber Ingot (Cook Coal)
         oreSmelting(pRecipeOutput, java.util.List.of(Items.COAL), RecipeCategory.MISC, ModItems.CARBON_FIBER_INGOT.get(), 0.7f, 200, "carbon_fiber");
         
-        // Echo Template Duplication (7 Diamonds + 1 Sculk Block + 1 Template)
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ECHO_ARMOR_TRIM_SMITHING_TEMPLATE.get(), 2)
                 .pattern("DSD")
                 .pattern("DTD")
@@ -91,110 +89,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.SCULK)
                 .define('T', ModItems.ECHO_ARMOR_TRIM_SMITHING_TEMPLATE.get())
                 .unlockedBy("has_template", has(ModItems.ECHO_ARMOR_TRIM_SMITHING_TEMPLATE.get()))
-                .save(pRecipeOutput);
+                .save(pRecipeOutput, AllTheTools.MODID + ":echo_template_duplication");
     }
 
     private void addToolAndArmorRecipes(RecipeOutput output, Item material, Item stick, DeferredItem<Item> sword, DeferredItem<Item> pickaxe, DeferredItem<Item> axe, DeferredItem<Item> shovel, DeferredItem<Item> hoe, DeferredItem<Item> helmet, DeferredItem<Item> chestplate, DeferredItem<Item> leggings, DeferredItem<Item> boots, @Nullable DeferredItem<Item> shield, DeferredItem<Item> spear, String name) {
-        // SWORD
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, sword.get())
-                .pattern("M")
-                .pattern("M")
-                .pattern("S")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // PICKAXE
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pickaxe.get())
-                .pattern("MMM")
-                .pattern(" S ")
-                .pattern(" S ")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // AXE
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, axe.get())
-                .pattern("MM")
-                .pattern("MS")
-                .pattern(" S")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // SHOVEL
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, shovel.get())
-                .pattern("M")
-                .pattern("S")
-                .pattern("S")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // HOE
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hoe.get())
-                .pattern("MM")
-                .pattern(" S")
-                .pattern(" S")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // HELMET
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, helmet.get())
-                .pattern("MMM")
-                .pattern("M M")
-                .define('M', material)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // CHESTPLATE
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, chestplate.get())
-                .pattern("M M")
-                .pattern("MMM")
-                .pattern("MMM")
-                .define('M', material)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // LEGGINGS
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, leggings.get())
-                .pattern("MMM")
-                .pattern("M M")
-                .pattern("M M")
-                .define('M', material)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // BOOTS
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, boots.get())
-                .pattern("M M")
-                .pattern("M M")
-                .define('M', material)
-                .unlockedBy("has_material", has(material))
-                .save(output);
-        // SHIELD
-        if (shield != null) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, shield.get())
-                    .pattern("MIM")
-                    .pattern("MMM")
-                    .pattern(" M ")
-                    .define('M', material)
-                    .define('I', Items.IRON_INGOT)
-                    .unlockedBy("has_material", has(material))
-                    .save(output);
-        }
-        // SPEAR
-        if (spear != null) {
-            addSpearRecipe(output, material, stick, spear, name);
-        }
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, sword.get()).pattern("M").pattern("M").pattern("S").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_sword");
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, pickaxe.get()).pattern("MMM").pattern(" S ").pattern(" S ").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_pickaxe");
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, axe.get()).pattern("MM").pattern("MS").pattern(" S").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_axe");
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, shovel.get()).pattern("M").pattern("S").pattern("S").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_shovel");
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, hoe.get()).pattern("MM").pattern(" S").pattern(" S").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_hoe");
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, helmet.get()).pattern("MMM").pattern("M M").define('M', material).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_helmet");
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, chestplate.get()).pattern("M M").pattern("MMM").pattern("MMM").define('M', material).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_chestplate");
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, leggings.get()).pattern("MMM").pattern("M M").pattern("M M").define('M', material).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_leggings");
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, boots.get()).pattern("M M").pattern("M M").define('M', material).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_boots");
+        if (shield != null) ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, shield.get()).pattern("MIM").pattern("MMM").pattern(" M ").define('M', material).define('I', Items.IRON_INGOT).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_shield");
+        addSpearRecipe(output, material, stick, spear, name);
     }
 
     private void addSpearRecipe(RecipeOutput output, Item material, Item stick, DeferredItem<Item> spear, String name) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, spear.get())
-                .pattern("M")
-                .pattern("S")
-                .pattern("S")
-                .define('M', material)
-                .define('S', stick)
-                .unlockedBy("has_material", has(material))
-                .save(output, AllTheTools.MODID + ":" + name + "_spear_recipe");
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, spear.get()).pattern("M").pattern("S").pattern("S").define('M', material).define('S', stick).unlockedBy("has_material", has(material)).save(output, AllTheTools.MODID + ":" + name + "_spear");
     }
 }
