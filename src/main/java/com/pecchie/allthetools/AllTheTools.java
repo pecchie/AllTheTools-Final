@@ -18,7 +18,7 @@ public class AllTheTools {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public AllTheTools(IEventBus modEventBus, ModContainer container) {
-        ModItems.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
