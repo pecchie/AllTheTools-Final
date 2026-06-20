@@ -4,14 +4,15 @@ import com.pecchie.allthetools.AllTheTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.Mod;
 
+import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = AllTheTools.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = AllTheTools.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class ModDataGenerators {
 
     @SubscribeEvent
@@ -22,12 +23,16 @@ public class ModDataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper).contentsGetter(), existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModGlobalLootModifierProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModLootTableProvider(packOutput, lookupProvider, Collections.emptyList()));
+        
+        ModBlockTagsProvider blockTags = new ModBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(event.includeServer(), blockTags);
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+        
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "en_us"));
         generator.addProvider(event.includeClient(), new ModLanguageProvider(packOutput, "it_it"));
+        
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifierProvider(packOutput, lookupProvider));
     }
 }
