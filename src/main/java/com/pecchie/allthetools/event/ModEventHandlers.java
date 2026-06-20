@@ -13,7 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.player.AnvilRepairEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEvent.LivingTickEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
 
 @EventBusSubscriber(modid = AllTheTools.MODID)
 public class ModEventHandlers {
@@ -49,7 +49,7 @@ public class ModEventHandlers {
     }
 
     @SubscribeEvent
-    public static void onLivingTick(LivingTickEvent event) {
+    public static void onLivingTick(LivingEvent.LivingTickEvent event) {
         if (event.getEntity() instanceof Player player) {
             boolean hasEchoTool = player.getMainHandItem().getItem() instanceof CustomEchoToolItem || 
                                  player.getOffhandItem().getItem() instanceof CustomEchoToolItem;
