@@ -194,11 +194,52 @@ public class ModItems {
     public static final DeferredItem<Item> FLINT_SPEAR = ITEMS.register("flint_spear", () -> new CustomSpearItem(ModToolTiers.FLINT, new Item.Properties()));
 
     // === STONE ===
+    public static final DeferredItem<Item> STONE_SWORD = registerTool("stone_sword", ModToolTiers.STONE, 3, -2.4F, "sword");
+    public static final DeferredItem<Item> STONE_PICKAXE = registerTool("stone_pickaxe", ModToolTiers.STONE, 1, -2.8F, "pickaxe");
+    public static final DeferredItem<Item> STONE_AXE = registerTool("stone_axe", ModToolTiers.STONE, 6.0F, -3.2F, "axe");
+    public static final DeferredItem<Item> STONE_SHOVEL = registerTool("stone_shovel", ModToolTiers.STONE, 1.5F, -3.0F, "shovel");
+    public static final DeferredItem<Item> STONE_HOE = registerTool("stone_hoe", ModToolTiers.STONE, -2, -1.0F, "hoe");
     public static final DeferredItem<ArmorItem> STONE_HELMET = registerArmor("stone", ModArmorMaterials.STONE, ArmorItem.Type.HELMET);
     public static final DeferredItem<ArmorItem> STONE_CHESTPLATE = registerArmor("stone", ModArmorMaterials.STONE, ArmorItem.Type.CHESTPLATE);
     public static final DeferredItem<ArmorItem> STONE_LEGGINGS = registerArmor("stone", ModArmorMaterials.STONE, ArmorItem.Type.LEGGINGS);
     public static final DeferredItem<ArmorItem> STONE_BOOTS = registerArmor("stone", ModArmorMaterials.STONE, ArmorItem.Type.BOOTS);
     public static final DeferredItem<Item> STONE_SPEAR = ITEMS.register("stone_spear", () -> new CustomSpearItem(ModToolTiers.STONE, new Item.Properties()));
+
+    // === LEATHER ===
+    public static final DeferredItem<Item> LEATHER_SWORD = registerTool("leather_sword", ModToolTiers.LEATHER, 3, -2.4F, "sword");
+    public static final DeferredItem<Item> LEATHER_PICKAXE = registerTool("leather_pickaxe", ModToolTiers.LEATHER, 1, -2.8F, "pickaxe");
+    public static final DeferredItem<Item> LEATHER_AXE = registerTool("leather_axe", ModToolTiers.LEATHER, 6.0F, -3.2F, "axe");
+    public static final DeferredItem<Item> LEATHER_SHOVEL = registerTool("leather_shovel", ModToolTiers.LEATHER, 1.5F, -3.0F, "shovel");
+    public static final DeferredItem<Item> LEATHER_HOE = registerTool("leather_hoe", ModToolTiers.LEATHER, -2, -1.0F, "hoe");
+    public static final DeferredItem<ArmorItem> LEATHER_HELMET = registerArmor("leather", ModArmorMaterials.LEATHER, ArmorItem.Type.HELMET);
+    public static final DeferredItem<ArmorItem> LEATHER_CHESTPLATE = registerArmor("leather", ModArmorMaterials.LEATHER, ArmorItem.Type.CHESTPLATE);
+    public static final DeferredItem<ArmorItem> LEATHER_LEGGINGS = registerArmor("leather", ModArmorMaterials.LEATHER, ArmorItem.Type.LEGGINGS);
+    public static final DeferredItem<ArmorItem> LEATHER_BOOTS = registerArmor("leather", ModArmorMaterials.LEATHER, ArmorItem.Type.BOOTS);
+    public static final DeferredItem<Item> LEATHER_SPEAR = ITEMS.register("leather_spear", () -> new CustomSpearItem(ModToolTiers.LEATHER, new Item.Properties()));
+
+    // === CHAIN ===
+    public static final DeferredItem<Item> CHAIN_SWORD = registerTool("chain_sword", ModToolTiers.CHAIN, 3, -2.4F, "sword");
+    public static final DeferredItem<Item> CHAIN_PICKAXE = registerTool("chain_pickaxe", ModToolTiers.CHAIN, 1, -2.8F, "pickaxe");
+    public static final DeferredItem<Item> CHAIN_AXE = registerTool("chain_axe", ModToolTiers.CHAIN, 6.0F, -3.2F, "axe");
+    public static final DeferredItem<Item> CHAIN_SHOVEL = registerTool("chain_shovel", ModToolTiers.CHAIN, 1.5F, -3.0F, "shovel");
+    public static final DeferredItem<Item> CHAIN_HOE = registerTool("chain_hoe", ModToolTiers.CHAIN, -2, -1.0F, "hoe");
+    public static final DeferredItem<ArmorItem> CHAIN_HELMET = registerArmor("chain", ModArmorMaterials.CHAIN, ArmorItem.Type.HELMET);
+    public static final DeferredItem<ArmorItem> CHAIN_CHESTPLATE = registerArmor("chain", ModArmorMaterials.CHAIN, ArmorItem.Type.CHESTPLATE);
+    public static final DeferredItem<ArmorItem> CHAIN_LEGGINGS = registerArmor("chain", ModArmorMaterials.CHAIN, ArmorItem.Type.LEGGINGS);
+    public static final DeferredItem<ArmorItem> CHAIN_BOOTS = registerArmor("chain", ModArmorMaterials.CHAIN, ArmorItem.Type.BOOTS);
+    public static final DeferredItem<Item> CHAIN_SPEAR = ITEMS.register("chain_spear", () -> new CustomSpearItem(ModToolTiers.CHAIN, new Item.Properties()));
+
+    // === COPPER ===
+    public static final DeferredItem<Item> COPPER_SWORD = registerTool("copper_sword", ModToolTiers.COPPER, 3, -2.4F, "sword");
+    public static final DeferredItem<Item> COPPER_PICKAXE = registerTool("copper_pickaxe", ModToolTiers.COPPER, 1, -2.8F, "pickaxe");
+    public static final DeferredItem<Item> COPPER_AXE = registerTool("copper_axe", ModToolTiers.COPPER, 6.0F, -3.2F, "axe");
+    public static final DeferredItem<Item> COPPER_SHOVEL = registerTool("copper_shovel", ModToolTiers.COPPER, 1.5F, -3.0F, "shovel");
+    public static final DeferredItem<Item> COPPER_HOE = registerTool("copper_hoe", ModToolTiers.COPPER, -2, -1.0F, "hoe");
+    public static final DeferredItem<ArmorItem> COPPER_HELMET = registerArmor("copper", ModArmorMaterials.COPPER, ArmorItem.Type.HELMET);
+    public static final DeferredItem<ArmorItem> COPPER_CHESTPLATE = registerArmor("copper", ModArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE);
+    public static final DeferredItem<ArmorItem> COPPER_LEGGINGS = registerArmor("copper", ModArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS);
+    public static final DeferredItem<ArmorItem> COPPER_BOOTS = registerArmor("copper", ModArmorMaterials.COPPER, ArmorItem.Type.BOOTS);
+    public static final DeferredItem<Item> COPPER_SPEAR = ITEMS.register("copper_spear", () -> new CustomSpearItem(ModToolTiers.COPPER, new Item.Properties()));
 
     // === DEEPSLATE ===
     public static final DeferredItem<Item> DEEPSLATE_SWORD = registerTool("deepslate_sword", ModToolTiers.DEEPSLATE, 3, -2.4F, "sword");
@@ -308,11 +349,8 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> ECHO_BOOTS = registerArmor("echo", ModArmorMaterials.ECHO, ArmorItem.Type.BOOTS);
     public static final DeferredItem<Item> ECHO_SPEAR = ITEMS.register("echo_spear", () -> new CustomSpearItem(ModToolTiers.ECHO, new Item.Properties()));
 
-    // === SPEARS ===
-    public static final DeferredItem<Item> WOOD_SPEAR = OAK_WOOD_SPEAR; // Alias per compatibilità
-    public static final DeferredItem<Item> LEATHER_SPEAR = ITEMS.register("leather_spear", () -> new CustomSpearItem(ModToolTiers.LEATHER, new Item.Properties()));
-    public static final DeferredItem<Item> CHAIN_SPEAR = ITEMS.register("chain_spear", () -> new CustomSpearItem(ModToolTiers.CHAIN, new Item.Properties()));
-    public static final DeferredItem<Item> COPPER_SPEAR = ITEMS.register("copper_spear", () -> new CustomSpearItem(ModToolTiers.COPPER, new Item.Properties()));
+    // === SPEARS (EXTRA) ===
+    public static final DeferredItem<Item> WOOD_SPEAR = OAK_WOOD_SPEAR;
     public static final DeferredItem<Item> IRON_SPEAR = ITEMS.register("iron_spear", () -> new CustomSpearItem(Tiers.IRON, new Item.Properties()));
     public static final DeferredItem<Item> GOLD_SPEAR = ITEMS.register("gold_spear", () -> new CustomSpearItem(Tiers.GOLD, new Item.Properties()));
     public static final DeferredItem<Item> DIAMOND_SPEAR = ITEMS.register("diamond_spear", () -> new CustomSpearItem(Tiers.DIAMOND, new Item.Properties()));
@@ -321,7 +359,6 @@ public class ModItems {
     // === MISC ===
     public static final DeferredItem<Item> CARBON_FIBER_INGOT = ITEMS.register("carbon_fiber_ingot", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ECHO_ARMOR_TRIM_SMITHING_TEMPLATE = ITEMS.register("echo_armor_trim_smithing_template", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> CHAIN_SWORD = registerTool("chain_sword", ModToolTiers.CHAIN, 3, -2.4F, "sword");
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
